@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jelajah — Premium Travel Assistant</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Markdown Parser -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Ambient Background -->
+  <div class="ambient-bg">
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+  </div>
+
+  <div class="app-container">
+    
+    <!-- Sidebar / Header Area -->
+    <aside class="sidebar">
+      <div class="brand-area">
+        <div class="logo">
+          <i class="ri-compass-3-fill"></i>
+          <h1>Jelajah</h1>
+        </div>
+        <p class="tagline">Your personal travel companion</p>
+      </div>
+
+      <div class="stamps-container">
+        <p class="stamps-title">Quick Suggestions</p>
+        <section class="stamps" id="stamps">
+          <button class="stamp" data-prompt="Bantu aku rencanain trip hemat 3 hari ke Yogyakarta ya">
+            <i class="ri-map-pin-line"></i> Yogyakarta 3D2N
+          </button>
+          <button class="stamp" data-prompt="Rekomendasiin kuliner lokal wajib coba kalau ke Bali dong">
+            <i class="ri-restaurant-2-line"></i> Kuliner Bali
+          </button>
+          <button class="stamp" data-prompt="Aku mau solo trip hemat ke Jepang, kasih tips dong">
+            <i class="ri-flight-takeoff-line"></i> Solo Trip Jepang
+          </button>
+          <button class="stamp" data-prompt="Waktu terbaik buat liburan ke Raja Ampat kapan ya?">
+            <i class="ri-sun-line"></i> Waktu Raja Ampat
+          </button>
+        </section>
+      </div>
+      
+      <div class="sidebar-footer">
+        <button id="reset-btn" class="reset-btn">
+          <i class="ri-refresh-line"></i> New Conversation
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Chat Area -->
+    <main class="chat-area">
+      <!-- Topbar for mobile -->
+      <div class="mobile-topbar">
+        <div class="logo">
+          <i class="ri-compass-3-fill"></i>
+          <h1>Jelajah</h1>
+        </div>
+        <button id="mobile-reset-btn" class="icon-btn"><i class="ri-refresh-line"></i></button>
+      </div>
+
+      <!-- Chat Window -->
+      <section class="chat-window" id="chat-box" aria-live="polite">
+        <!-- Messages will be appended here -->
+      </section>
+
+      <!-- Input Area -->
+      <div class="input-container">
+        <form id="chat-form" class="chat-input-form">
+          <input
+            type="text"
+            id="user-input"
+            placeholder="Tanya soal destinasi, budget, atau itinerary..."
+            autocomplete="off"
+            required
+          />
+          <button type="submit" aria-label="Kirim" class="send-btn">
+            <i class="ri-send-plane-fill"></i>
+          </button>
+        </form>
+        <p class="disclaimer">Jelajah mungkin memberikan informasi yang kurang akurat. Pastikan untuk mengecek ulang.</p>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
